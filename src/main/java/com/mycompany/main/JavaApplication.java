@@ -15,17 +15,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @author tehreem.nisa
  */
 public class JavaApplication {
-       public static void main(String[] args) throws IOException{  
-          
-         //Loading bean property file
+
+    public static void main(String[] args) throws IOException {
+
+        //Loading bean property file
         ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         //Instantiating a Manager
-         Employee manager=(Employee) ctx.getBean("Manager");
-        //Instantiating a Employee
-         Employee worker=(Employee) ctx.getBean("Worker");
-         
+        Employee manager = (Employee) ctx.getBean("object");
         manager.show();
-         worker.show();
-          
-    }  
+    }
 }

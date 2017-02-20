@@ -12,23 +12,31 @@ package com.mycompany.model;
 public class Employee {
     
 private long salary;  
-private String name;  
 private String type;
+private String title;
   
 public Employee() {
-    System.out.println("def cons");
 }  
   
-public Employee(long salary) {this.salary = salary;}  
-  
-public Employee(String name) {  this.name = name;}  
-  
-public Employee(long salary, String type) {  
+  public long getsalary() {  
+    return salary;  
+}  
+public void setsalary(long salary) {  
     this.salary = salary;  
-    this.name = type;  
 }  
-  
+  public String gettype() {  
+    return type;  
+}  
+public void settype(String type) {  
+    this.type = type;  
+} 
+  public String gettitle() {  
+    return title;  
+}  
+public void settitle(String title) {  
+    this.title = title;  
+} 
 public void show(){  
-    System.out.println("Name:"+name+"\n"+"Salary:"+salary+"Type"+type);  
+    System.out.println("Title:"+title+"\n"+"Salary:"+salary+"\n"+"Type:"+type);  
 }
 }
